@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+}
+
+#logo div {
+  position: absolute;
+}
+
+#logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loop 6s linear infinite;
+ 
+ 
+}
+#logo .one {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #00bcd4;
+  opacity: 0;
+  animation: move 10s forwards;
+
+}
+
+#logo .three,
+#logo .two,
+#logo .four {
+  width: 300px;
+  height:95px;
+  border: 8px solid #00bcd4;
+  border-radius: 50%;
+  opacity: 0;
+  
+}
+.two{
+  transform: rotate(-60deg);
+  animation: move 8s forwards;
+}
+.three{
+  transform: rotate(60deg);
+  animation: move 8s forwards;
+}
+.four{
+  animation: move 6s forwards;
+}
+
+@keyframes move {
+  to{
+  opacity: 1;
+  }
+}
+@keyframes loop {
+  to{
+  transform: rotate(360deg) ;
+  }
+}
+
+
+
+
